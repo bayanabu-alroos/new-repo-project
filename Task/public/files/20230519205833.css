@@ -1,0 +1,458 @@
+div.clsDeviceMedia{
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.clsCloseButton {
+  float: right;
+}
+
+.clsCloseButton:hover,
+.clsCloseButton:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+div#divMain {
+  overflow: hidden;
+}
+
+div.divInnerMain {
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow: auto;
+}
+
+div.divContainer {
+  width: 100%;
+  height: calc(100% - 16px);
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+div.divContainer div {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+div.divContainer div.clsClear {
+  border: none;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 98%;
+  margin-top: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  display: inline-block;
+}
+
+div.divContainer>div#divCommunicate {
+  display: none;
+  height: calc(100% - 16px);
+}
+
+div.divContainer>div#divCommunicate *.clsCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.divContainer>div#divCommunicate div.clsPeerLabel {
+  display: block;
+  width: 60%;
+  text-align: center;
+  margin: 5px auto;
+  min-width: 60px;
+  overflow: visible;
+  padding: 0px;
+}
+
+div.divContainer>div#divCommunicate div.clsPeerLabel>span {
+  vertical-align: middle;
+}
+
+div.divContainer>div#divCommunicate *.clsPeerView {
+  width: 96%;
+  height: 96%;
+}
+
+div.divContainer div.divVideo {
+  border: solid 1px black;
+  float: <awa:style:left/>;
+  width: 50%;
+  height: 90%;
+  margin-<awa:style:left/>: 1%;
+  display: inline-block;
+  overflow: hidden;
+  text-align: <awa:style:right/>;
+  /*Bug #964: Video Mirror*/
+  direction: <awa:style:revdir/>;
+}
+
+div.divContainer div.divVideo>div {
+  height: 100%;
+  display: block;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+div.divContainer div.divVideo>div>video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+div.divContainer div.divVideo *.clsLocal {
+  position: relative;
+  transition-property: top;
+  transition-duration: 489ms;
+  transition-timing-function: ease-out;
+  top: -12px;
+  display: block;
+}
+
+div.divContainer div.divVideo *.clsLocalShow {
+  top: calc(-30% - 18px);
+}
+
+div.divContainer div.divVideo input.clsLocal {
+  width: 10%;
+  height: 20px;
+  border-radius: 2px;
+  z-index: 2;
+  margin-bottom: 0px;
+}
+
+div.divContainer div.divVideo video.clsLocal {
+  height: 30%;
+  border: inset 3px grey;
+}
+
+div.divContainer div.divText {
+  border: solid 1px black;
+  margin-<awa:style:left/>: 1%;
+  width: 45%;
+  height: 90%;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+div.divContainer div.divText textarea {
+  resize: none;
+  width: 98%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  overflow-y: auto;
+}
+
+div.divContainer div.divVidTextCont {
+  border: none;
+  width: 90%;
+  margin-<awa:style:left/>: 2%;
+  display: inline-block;
+  height: 65%;
+}
+
+div.divContainer div.divMsgPane {
+  border: none;
+  width: 97%;
+  margin-<awa:style:left/>: 1%;
+  display: block;
+  overflow: auto;
+  max-height: 62%;
+}
+
+div.divContainer div.divMsgPane span {
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 66%;
+  padding:8px;
+  border-width: 1px;
+  border-style: solid;
+  border-spacing: 10px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  font-family: Sans-Serif;
+  font-size: smaller;
+  display: inline-block;
+  white-space: pre-line;
+  text-align: <awa:style:left/>;
+}
+
+div.divContainer span.spanMsgTo {
+  margin-<awa:style:left/>: 1%;
+}
+
+div.divContainer span.spanMsgFrom {
+  margin-<awa:style:left/>: 29%;
+}
+
+div.divContainer input[type=text] {
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Arial;
+  font-size: small;
+}
+
+div.clsCallTransfer div.clsTransferButton {
+  display: inline-block;
+  height: 40px;
+  width: 20%;
+  border: none;
+  vertical-align: bottom;
+}
+
+div.clsCallTransfer div.clsTransferButton input[type=button] {
+  width: 80%;
+}
+
+div.clsCallTransfer {
+  position: relative;
+  display: block;
+  top: 121px;
+  margin: -110px auto;
+  width: 70%;
+  height: 100px;
+  border-style: outset;
+  border-width: 4px;
+  z-index: 300;
+  padding: 5px;
+}
+
+div.clsCallTransfer>div {
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+}
+
+div.divContainer div.divCommands {
+  margin-top: 10px;
+  margin-<awa:style:right/>: 5%;
+  float: <awa:style:right/>;
+  width: 1%;
+  text-align: center;
+}
+
+div.clsCallTransfer div.clsTransferTypeSelection {
+  width: 20%;
+  margin-<awa:style:left/>: 5%;
+}
+
+div.clsCallTransfer div.clsTransferTypeSelection * {
+  display: inline;
+}
+
+div.clsCallTransfer div.clsTransferTypeSelection label {
+  width: auto;
+  margin-<awa:style:left/>: 5px;
+}
+
+div.clsCallTransfer div.clsTransferTypeSelection input[type=radio] {
+  width: 30px;
+}
+
+div.clsCallTransfer div.clsTransferSelection {
+  width: 50%;
+  height: 100px;
+}
+
+div.clsCallTransfer div.clsServiceSelection select {
+  display: inline-block;
+  width: 80%;
+  margin: 10px 0px;
+  height: auto;
+}
+
+div.clsCallTransfer div.clsAgentSelection {
+  display: none;
+}
+
+div.clsCallTransfer div.clsAgentSelection select {
+  vertical-align: middle;
+  display: inline-block;
+  width: 60%;
+}
+
+div.clsCallTransfer div.clsAgentSelection input {
+  vertical-align: bottom;
+  width: 20%;
+  margin-<awa:style:left/>: 5%;
+  display: inline-block;
+}
+
+div.divContainer input[type=button] {
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin-bottom: 5px;
+}
+
+div.divContainer input[type=button]#cmdText {
+  background-image: url("..<awa:fixed:apppath/>/chat/png");
+}
+
+div.divContainer input[type=button]#cmdSend {
+  background-image: url("..<awa:fixed:apppath/>/send/png");
+  float: <awa:style:right/>;
+}
+
+div.divContainer input[type=button]#cmdHangUp {
+  background-image: url("..<awa:fixed:apppath/>/phone/png");
+  background-color:  <awa:style:ec/>;
+}
+
+div.divContainer input[type=button]#cmdTransfer {
+  background-image: url("..<awa:fixed:apppath/>/exchange/png");
+}
+
+div.divContainer input[type=button]#cmdRedirect {
+  background-image: url("..<awa:fixed:apppath/>/redirect/png");
+}
+
+div.divContainer input[type=button]#cmdNotes {
+    background-image: url("..<awa:fixed:apppath/>/note/png");
+}
+
+div.divContainer input[type=button]#cmdRestart {
+  display: none;
+}
+
+div.divContainer input[type=button]#cmdScreen {
+  background-image: url("..<awa:fixed:apppath/>/images/screen");
+}
+
+div.divContainer input[type=button]#cmdInfo {
+  background-image: url("..<awa:fixed:apppath/>/images/info");
+}
+
+div.divContainer input[type=button]#cmdNotes.pressed {
+  background-color: #aaeebb;
+}
+
+div.divContainer div#divCommunicate div.notes {
+  border-width: 2px;
+  border-style: solid;
+  width: 90%;
+  height: 14%;
+  overflow: auto;
+}
+
+div.divContainer div.divCommands div.CommandsHolder {
+  position: absolute;
+  top: 23%;
+  text-align: center;
+  <awa:style:left/>: 25%;
+  padding: 5px;
+  background-color: #e6f0ff;
+  opacity: 0.9;
+  border-radius: 20px;
+  width: 30%;
+  z-index: 1000;
+}
+
+div.divContainer div.divCommands div.CommandsHolder div.spanHolder {
+  width: 100%;
+}
+
+div.divContainer div.divCommands div.CommandsHolder span.spanCommand {
+  display: inline-block;
+  cursor: pointer;
+  font-size: larger;
+  margin: 0px 10%;
+}
+
+div.divContainer div.divCommands div#divNotes div.NotesHolder {
+  height: 85%;
+  overflow-y: auto;
+}
+
+div.divContainer div.divCommands div#divNotes div.NotesHolder div {
+  margin: 5px;
+  position: relative;
+  border-radius: 20px;
+  height: auto;
+  width: auto;
+}
+
+div.divContainer div.divCommands div#divNotes div.NotesHolder div.urlNote {
+  background-color: #caf3f3;
+}
+
+div.divContainer div.divCommands div#divNotes div.NotesHolder div.comment {
+  color: #292f3b;
+  background-color: #747474;
+}
+
+div.divContainer div.divCommands div.CommandsHolder input.hide {
+  display: none;
+}
+
+div.divContainer div.divCommands div.showCommands {
+  <awa:style:left/>: 55%;
+  transition-property: <awa:style:left/>;
+  transition-duration: 600ms;
+  transition-timing-function: ease-out;
+}
+
+div.divContainer div.divCommands div.hideCommands{
+  <awa:style:left/>: 105%;
+  transition-property: <awa:style:left/>;
+  transition-duration: 600ms;
+  transition-timing-function: ease-out;
+}
+
+div.clsCallTransfer>span.closeBtn {
+  margin: 3px;
+  float: <awa:style:right/>;
+  cursor: pointer;
+}
+
+div.clsRetryCountdown {
+  text-align: center;
+  overflow: visible;
+  padding: 10px;
+}
+
+div.clsRetryCountdown>span {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+div.clsRetryCountdown>input {
+  display: inline-block;
+  width: 20%;
+  height: 30px;
+  margin-top: 10px;
+}
